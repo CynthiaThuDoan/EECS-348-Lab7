@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Font Control</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #textColorForm {
+        margin-bottom: 10px;
+    }
+    #textColorForm input[type="number"] {
+        width: 50px;
+    }
+    #textColorForm button {
+        margin-top: 5px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #outputText {
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px solid #000;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <p id="outputText">Paragraph to be altered.</p>
+    <form id="textColorForm">
+        Border R(0-255): <input type="number" id="borderR" min="0" max="255"> 
+        Border G(0-255): <input type="number" id="borderG" min="0" max="255"> 
+        Border B(0-255): <input type="number" id="borderB" min="0" max="255"> 
+        Border Width: <input type="number" id="borderWidth" min="1">
+        <br>
+        Background R(0-255): <input type="number" id="backgroundR" min="0" max="255"> 
+        Background G(0-255): <input type="number" id="backgroundG" min="0" max="255"> 
+        Background B(0-255): <input type="number" id="backgroundB" min="0" max="255"> 
+        <br>
+        <button type="button" onclick="changeColor()">Change the color!</button>
+    </form>
+</div>
+
+<script>
+    function changeColor() {
+        var borderR = document.getElementById("borderR").value;
+        var borderG = document.getElementById("borderG").value;
+        var borderB = document.getElementById("borderB").value;
+        var borderWidth = document.getElementById("borderWidth").value;
+        var backgroundR = document.getElementById("backgroundR").value;
+        var backgroundG = document.getElementById("backgroundG").value;
+        var backgroundB = document.getElementById("backgroundB").value;
+
+        var outputText = document.getElementById("outputText");
+
+        outputText.style.border = `solid rgb(${borderR}, ${borderG}, ${borderB}) ${borderWidth}px`;
+        outputText.style.backgroundColor = `rgb(${backgroundR}, ${backgroundG}, ${backgroundB})`;
+    }
+</script>
+
+</body>
+</html>

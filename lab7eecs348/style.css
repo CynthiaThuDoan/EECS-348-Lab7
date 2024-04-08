@@ -1,0 +1,99 @@
+
+body {
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(166, 195, 246);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #777;
+}
+
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  text-align: center;
+}
+
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  position:relative;
+  background-color: rgb(176, 216, 251);
+}
+
+.overlay-picture {
+  position: absolute;
+  vertical-align: middle;
+  left: 0;
+  width: 100x;
+  height: 100px;
+}
+
+.reversed-img {
+  position: absolute;
+  vertical-align: middle;
+  right: 0;
+  width: 100x;
+  height: 100px;
+}
+
+/* style1.css */
+
+a[href^="mailto:"],
+a[href^="https://github.com/CynthiaThuDoan"]{
+  color: white; 
+}
+
+
+.video-container {
+  text-align: center;
+  margin-top: 20px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
